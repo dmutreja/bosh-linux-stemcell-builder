@@ -1,0 +1,27 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ((docker-repo-name))/os-image-stemcell-builder
+
+inputs:
+  - name: bosh-linux-stemcell-builder
+  - name: version
+  - name: stemcells-index
+  - name: os-image
+
+outputs:
+  - name: stemcell
+  - name: stemcells-index
+    path: stemcells-index-output
+
+run:
+  path: bosh-linux-stemcell-builder/ci/tasks/build-from-local-os-image.sh
+
+params:
+  IAAS:         replace-me
+  HYPERVISOR:   replace-me
+  OS_NAME:      replace-me
+  OS_VERSION:   replace-me
