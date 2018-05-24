@@ -1,4 +1,3 @@
-cloud-init
 dmidecode
 efibootmgr
 grub-efi-amd64-bin
