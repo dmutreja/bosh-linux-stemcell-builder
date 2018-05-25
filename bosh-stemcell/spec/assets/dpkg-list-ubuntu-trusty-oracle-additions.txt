@@ -7,7 +7,6 @@ grub-pc-bin
 grub2-common
 iptables-persistent
 libpci3:amd64
-libyaml-0-2:amd64
 lsscsi
 open-iscsi
 python-chardet
